@@ -1,4 +1,5 @@
 import express from 'express';
+import loginRouter from './routers/login.routes';
 import productRouter from './routers/products.routes';
 import userRouter from './routers/users.routes';
 
@@ -8,5 +9,6 @@ app.use(express.json());
 
 app.use('/products', productRouter);
 app.use('/users', userRouter);
+app.use('/login', loginRouter);
 
 export default app;
