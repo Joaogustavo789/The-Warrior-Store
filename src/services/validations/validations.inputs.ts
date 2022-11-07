@@ -1,6 +1,7 @@
 import ILogin from '../../interfaces/login.interface';
 import IProduct from '../../interfaces/product.interface';
-import { userNameSchema, passwordSchema, productSchema } from './schemas';
+import IUsers from '../../interfaces/users.interface';
+import { userNameSchema, passwordSchema, productSchema, userSchema } from './schemas';
 
 const verifyLogin = async ({ username, password }: ILogin) => {
   const { error } = userNameSchema.validate(username);
@@ -20,8 +21,21 @@ const verifyLogin = async ({ username, password }: ILogin) => {
 
 const verifyProduct = async (product: IProduct) => {
   const { error } = productSchema.validate(product);
-  console.log(error);
   
+  if (error && error.details[0].message.includes('required')) {
+    return { type: 'BAD_REQUEST', message: error.details[0].message };
+  }
+  
+  if (error) {
+    return { type: 'INVALID_VALUE', message: error.details[0].message };
+  }
+
+  return { type: null, message: '' };
+};
+
+const verifyUser = async (user: IUsers) => {
+  const { error } = userSchema.validate(user);
+
   if (error && error.details[0].message.includes('required')) {
     return { type: 'BAD_REQUEST', message: error.details[0].message };
   }
@@ -36,4 +50,5 @@ const verifyProduct = async (product: IProduct) => {
 export {
   verifyLogin,
   verifyProduct,
+  verifyUser,
 };
