@@ -2,7 +2,7 @@ import ILogin from '../interfaces/login.interface';
 import connection from '../models/connection';
 import LoginModel from '../models/login.model';
 import createToken from '../utils/jwt.util';
-import verifyLogin from './validations/validations.inputs';
+import { verifyLogin } from './validations/validations.inputs';
 
 class LoginService {
   public model: LoginModel;
