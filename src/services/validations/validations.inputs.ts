@@ -1,7 +1,8 @@
 import ILogin from '../../interfaces/login.interface';
 import IProduct from '../../interfaces/product.interface';
 import IUsers from '../../interfaces/users.interface';
-import { userNameSchema, passwordSchema, productSchema, userSchema } from './schemas';
+import { 
+  userNameSchema, passwordSchema, productSchema, userSchema, productsIdsSchema } from './schemas';
 
 const verifyLogin = async ({ username, password }: ILogin) => {
   const { error } = userNameSchema.validate(username);
@@ -47,8 +48,27 @@ const verifyUser = async (user: IUsers) => {
   return { type: null, message: '' };
 };
 
+const verifyProductsIds = async (productsIds: number[]) => {
+  const { error } = productsIdsSchema.validate(productsIds);
+  
+  if (error && error.details[0].message.includes('required')) {
+    return { type: 'BAD_REQUEST', message: '"productsIds" is required' };
+  }
+  
+  if (error) {
+    return { type: 'INVALID_VALUE', message: '"productsIds" must be an array' };
+  }
+
+  if (!productsIds.length) {
+    return { type: 'INVALID_VALUE', message: '"productsIds" must include only numbers' };
+  }
+
+  return { type: null, message: '' };
+};
+
 export {
   verifyLogin,
   verifyProduct,
   verifyUser,
+  verifyProductsIds,
 };

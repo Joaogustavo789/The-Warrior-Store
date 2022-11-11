@@ -10,6 +10,7 @@ const usernameSchema = Joi.string().min(3).required();
 const classeSchema = Joi.string().min(3).required();
 const levelSchema = Joi.number().min(1).required();
 const passwordSchemas = Joi.string().min(8).required();
+const productsIdsSchema = Joi.array().items(Joi.number()).required();
 
 const productSchema = Joi.object({
   name: nameSchema,
@@ -28,4 +29,5 @@ export {
   passwordSchema,
   productSchema,
   userSchema,
+  productsIdsSchema,
 };
