@@ -10,11 +10,11 @@ Nele foi utilizada a biblioteca do Node.js, o `Express`, na qual foi implementad
 
 ### Instalação
 #### Primeiro é necessário fazer o clone do repositório para a sua maquina:
-```js
+```bash
 git clone git@github.com:Joaogustavo789/The-Warrior-Store.git
 ```
 #### Depois é preciso entrar no repositório clonado:
-```js
+```bash
 cd The-Warrior-Store
 ```
 #### Em seguida é necessário fazer a instalação das dependências do projeto:
