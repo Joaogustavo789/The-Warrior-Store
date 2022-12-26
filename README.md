@@ -6,28 +6,77 @@
 
 The Warrior Store é uma loja de itens médievais na qual foi desenvolvida uma API utilizando `TypeScript`!
 
-Nele foi utilizada a biblioteca do Node.js, o `Express`, na qual foi implementada todas as camadas da arquitetura MSC `(Model, Service e Controller)`. Com isso é possível realizar alguma operações no banco de dados com MySQL: Criação, Listagem, Alteração, Remoção!  
+Nele foi utilizada a biblioteca do Node.js, o `Express`, na qual foi implementada todas as camadas da arquitetura MSC `(Model, Service e Controller)`. Com isso é possível realizar alguma operações no banco de dados com MySQL: Criação, Listagem, Alteração, Remoção!
 
-### Instalação
-#### Primeiro é necessário fazer o clone do repositório para a sua maquina:
+
+## Rodando com Docker
+
+<details>
+  <summary>Clique para expandir</summary>
+  
+  ## É necessário ter o Docker instalado em sua máquina.
+  
+- Clone o projeto
+
 ```bash
-git clone git@github.com:Joaogustavo789/The-Warrior-Store.git
-```
-#### Depois é preciso entrar no repositório clonado:
-```bash
-cd The-Warrior-Store
-```
-#### Em seguida é necessário fazer a instalação das dependências do projeto:
-- Com Docker:
-```js
-docker-compose up -d  // Ele irá rodar dois serviços, um do node e um do db!
-```
-- Sem Docker:
-```js
-npm install // Para isso é necessário ter o node instalado na máquina!
+  git clone git@github.com:Joaogustavo789/The-Warrior-Store.git
 ```
 
-### Construído com
+- Entre no diretório do projeto
+
+```bash
+  cd The-Warrior-Store
+```
+
+- Crie os Containers
+
+```js
+  docker-compose up -d  // Ele irá rodar dois serviços, um do node e um do db!
+```
+
+Se estiver usando `macOS` será necessário colocar manualmente uma opção `platform: linux/amd64` no serviço do banco de dados no arquivo docker-compose.yml desse projeto.
+
+- Entre no container do projeto
+
+```bash
+docker exec -it trybesmith bash
+```
+
+- Instale as dependências dentro do container
+
+```bash
+  npm install
+```
+</details>
+
+## Rodando localmente
+
+<details>
+  <summary>Clique para expandir</summary>
+  
+## É necessário ter o Node instalado e o MySQL instalados em sua máquina.
+
+- Clone o projeto
+
+```bash
+  git clone git@github.com:Joaogustavo789/The-Warrior-Store.git
+```
+
+- Entre no diretório do projeto
+
+```bash
+  cd The-Warrior-Store
+```
+
+- Instale as dependências
+
+```bash
+  npm install
+```
+</details>
+
+## Tecnologias e Ferramentas
+
 <br>
 <br>
 <table width="320px" align="center">
@@ -46,6 +95,10 @@ npm install // Para isso é necessário ter o node instalado na máquina!
           <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
       </td>
       <td width="80px" align="center">
+        <span><strong>Express</strong></span><br>
+          <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+      </td>
+      <td width="80px" align="center">
         <span><strong>TypeScript</strong></span><br>
           <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
       </td>
@@ -53,6 +106,14 @@ npm install // Para isso é necessário ter o node instalado na máquina!
   </tbody>
 </table>
 
-## Contato
+## Documentação
 
-João Gustavo - jgustavomendonca@gmail.com
+- [Docker](https://docs.docker.com/)
+- [MySQL](https://www.mysql.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [Typescript](https://www.typescriptlang.org/)
+
+## Feedback
+
+Se você tiver algum feedback, por favor nos deixe saber por meio de jgustavomendonca@gmail.com
