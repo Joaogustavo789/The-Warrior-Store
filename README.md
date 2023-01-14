@@ -54,7 +54,7 @@ docker exec -it trybesmith bash
 <details>
   <summary>Clique para expandir</summary>
   
-## É necessário ter o Node instalado e o MySQL instalados em sua máquina.
+## É necessário ter o Node e o MySQL instalados em sua máquina.
 
 - Clone o projeto
 
