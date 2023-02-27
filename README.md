@@ -95,7 +95,7 @@ docker exec -it trybesmith bash
           <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
       </td>
       <td width="80px" align="center">
-        <span><strong>Express</strong></span><br>
+        <span><strong>Express.js</strong></span><br>
           <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
       </td>
       <td width="80px" align="center">
