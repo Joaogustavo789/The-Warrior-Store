@@ -6,7 +6,7 @@
 
 The Warrior Store é uma loja de itens médievais na qual foi desenvolvida uma API utilizando `TypeScript`!
 
-Nele foi utilizada a biblioteca do Node.js, o `Express`, na qual foi implementada todas as camadas da arquitetura MSC `(Model, Service e Controller)`. Com isso é possível realizar alguma operações no banco de dados com MySQL: Criação, Listagem, Alteração, Remoção!
+Nele foi utilizada a biblioteca do Node.js, o `Express.js`, na qual foi implementada todas as camadas da arquitetura MSC `(Model, Service e Controller)`. Com isso é possível realizar alguma operações no banco de dados com MySQL: Criação, Listagem, Alteração, Remoção!
 
 
 ## Rodando com Docker
@@ -111,7 +111,7 @@ docker exec -it trybesmith bash
 - [Docker](https://docs.docker.com/)
 - [MySQL](https://www.mysql.com/)
 - [Node.js](https://nodejs.org/en/)
-- [Express](https://expressjs.com/pt-br/)
+- [Express.js](https://expressjs.com/pt-br/)
 - [Typescript](https://www.typescriptlang.org/)
 
 ## Feedback
