@@ -76,6 +76,8 @@ docker exec -it trybesmith bash
 </details>
 
 ## Documentação da API
+<details>
+  <summary>Clique para expandir</summary>
 
 ### Cria um novo produto
 
@@ -428,6 +430,7 @@ docker exec -it trybesmith bash
 ```js
  { "message": "\"productsIds\" must include only numbers" }
 ```
+</details>
 </details>
 </details>
 
